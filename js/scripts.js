@@ -21,17 +21,15 @@ $(document).ready(function() {
     newAccount.initialDeposit = inputtedInitialDeposit;
 
     $("ul#name").append("<li><span class='name'>" + newAccount.name + "</span></li>");
-    $("ul#initial-deposit").append("<li><span class='initialDeposit'>" +
-     newAccount.initialDeposit +
-     "</span></li>");
+    $("div#first-deposit").append(newAccount.initialDeposit);
 
     $("input#name").val("");
     $("input#initial-deposit").val("");
 
-    $(".name").last().click(function() {
-      $("#show-name").show();
-      $("#show-initial-deposit h2").text(newAccount.name + " " + newAccount.initialDeposit);
-      $(".initial-deposit").text(newAccount.initialDeposit);
-    });
+    // $(".name").last().click(function() {
+    //   $("#show-name").show();
+    //   $("#show-name h2").text(newAccount.name + " " + newAccount.initialDeposit);
+    //   $(".initialDeposit").text(newAccount.initialDeposit);
+    // });
   });
 });
